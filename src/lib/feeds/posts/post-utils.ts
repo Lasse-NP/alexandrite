@@ -31,7 +31,7 @@ export function hasImageExtension(url?: string) {
 	try {
 		const u = new URL(url);
 
-		if (/\.(png|jpg|jpeg|webp)$/.test(u.pathname)) {
+		if (/\.(png|jpg|jpeg|webp|avif)$/.test(u.pathname)) {
 			return true;
 		} else if (/\/image_proxy$/.test(u.pathname)) {
 			const proxied = u.searchParams.get('url');

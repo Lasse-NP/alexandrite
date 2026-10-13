@@ -1,0 +1,9 @@
+services:
+  alexandrite:
+    build: .
+    container_name: alexandrite
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      ALEXANDRITE_DEFAULT_INSTANCE: lemmy.zip
